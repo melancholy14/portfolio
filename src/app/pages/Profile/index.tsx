@@ -8,6 +8,7 @@ import { DiJavascript, DiCss3, DiJira, DiLess, DiReact, DiWordpress, DiNodejs } 
 
 import { selectProfile } from 'app/store/selectors';
 import { loadGithubProfile } from 'app/store/thunks';
+import { Container, Title } from 'app/components';
 
 function Profile() {
   const { loading, data, error } = useSelector(selectProfile);
@@ -28,13 +29,15 @@ function Profile() {
   } = data || {};
 
   return (
-    <div className="h-screen w-full flex p-4">
+    <Container>
       <div className="w-1/3 p-10 text-center">
         <div className={`transition duration-700 ease-in-out ${!loading ? 'opacity-100' : 'opacity-0 hidden'}`}>
           <img src={avatar} className="rounded-full mb-12 shadow-xl" alt="avatar" />
-          <h1 className="text-3xl font-bold">{name}</h1>
+          <Title className="text-5xl">{name}</Title>
           <p className="flex items-center justify-center italic text-xl">
-            <MdEmail />
+            <div className="w-6">
+              <MdEmail />
+            </div>
             <span className='ml-2'>melancholy14@hotmail.com</span>
           </p>
           <p className="flex items-center justify-center my-2">
@@ -64,7 +67,7 @@ function Profile() {
           <DiJira className="w-12 h-12" />
         </div>
       </div>
-    </div>
+    </Container>
   );
 }
 
