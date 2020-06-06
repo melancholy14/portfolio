@@ -6,8 +6,8 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { DiJavascript, DiCss3, DiJira, DiLess, DiReact, DiWordpress, DiNodejs } from 'react-icons/di';
 
-import { selectProfile } from '../store/slices/profileSlice';
-import { loadGithubProfile } from '../store/thunks';
+import { selectProfile } from 'app/store/selectors';
+import { loadGithubProfile } from 'app/store/thunks';
 
 function Profile() {
   const { loading, data, error } = useSelector(selectProfile);

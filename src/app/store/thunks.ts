@@ -1,8 +1,9 @@
 import axios from 'axios';
 
 import { loadRequest, loadFailure, loadSuccess } from './slices/profileSlice';
+import { AppDispatch } from '.';
 
-export const loadGithubProfile = () => dispatch => {
+export const loadGithubProfile = () => (dispatch: AppDispatch) => {
   dispatch(loadRequest());
 
   axios('https://api.github.com/users/melancholy14')

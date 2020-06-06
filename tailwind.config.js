@@ -83,6 +83,6 @@ module.exports = {
   plugins: [],
   purge: {
     enabled: false,
-    content: ['./src/**/*.html', './src/**/*.jsx', './src/**/*.js'],
+    content: ['./src/**/*.html', './src/**/*.tsx', './src/**/*.ts'],
   },
 };
