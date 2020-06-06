@@ -27,8 +27,6 @@ function Profile() {
     html_url: url,
   } = data || {};
 
-  // let loading = true;
-
   return (
     <div className="h-screen w-full flex p-4">
       <div className="w-1/3 p-10 text-center">
