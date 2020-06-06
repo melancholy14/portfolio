@@ -7,7 +7,7 @@ type ContainerProps = {
 
 function Container({ className, children }: ContainerProps) {
   return (
-    <div className={`h-screen w-full flex p-4 ${className || ''}`}>
+    <div className={`h-screen flex p-4 xl:mx-5/33 ${className || ''}`}>
       {children}
     </div>
   );

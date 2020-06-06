@@ -25,7 +25,7 @@ function Experience({
  }: ExperienceProps) {
   // mx-3 my-4 pb-4 border-b border-gray-900
   return (
-    <div className={`${backgroundClass} rounded-full p-16 w-84 absolute ${className}`}>
+    <div className={`${backgroundClass} rounded-full absolute text-11/12 ${className}`}>
       <div className="text-xl">
         <span className="font-semibold">{position}</span>
         <span className="mx-2">|</span>
@@ -33,7 +33,7 @@ function Experience({
       </div>
       <div>
         <p>{summary}</p>
-        <p>
+        <p className="flex flex-wrap">
           {specs.map((spec) => <span key={spec} className="mx-3 font-bold italic">{spec}</span>)}
         </p>
       </div>
