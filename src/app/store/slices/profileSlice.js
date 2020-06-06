@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const profileSlice = createSlice({
   name: 'profile',
   initialState: {
-    loading: false,
+    loading: true,
     data: undefined,
     error: undefined,
   },
