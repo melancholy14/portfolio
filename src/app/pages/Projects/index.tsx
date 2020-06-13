@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Container, Title } from 'app/components';
+import { Title } from 'app/components';
+import Container from 'app/layouts/Container';
 
 import { projects, experiences } from './constants';
 

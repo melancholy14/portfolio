@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container } from 'app/components';
+import Container from 'app/layouts/Container';
 
 import GithubProfile from './GithubProfile';
 import Introduction from './Introduction';
