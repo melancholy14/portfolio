@@ -39,7 +39,7 @@ module.exports = {
         92: '23rem',
         120: '30rem',
         // max: 'max-content',
-        '12/25': `${(12 / 25 * 100)}%`,
+        '12/25': `${(12 / 25) * 100}%`,
       },
       minWidth: {
         // 80: '20rem',
@@ -71,7 +71,7 @@ module.exports = {
       },
       transitionProperty: {
         // float: 'float',
-        // visibility: 'visibility',
+        visibility: 'visibility',
         width: 'width',
       },
       boxShadow: {
@@ -87,19 +87,24 @@ module.exports = {
         84: '21rem',
         '1/50': '2%',
         '1/3': '33%',
+        '1/2': '50%',
       },
       padding: {
         '1/20': '5%',
         '1/14': '7%',
         '3/33': '9%',
-        '5/33': '15%'
+        '5/33': '15%',
       },
       margin: {
-        '5/33': '15%'
+        '5/33': '15%',
       },
       fontSize: {
         '11/12': `${(11 / 12) * 100}%`,
-      }
+      },
+      rotate: {
+        '-15': '-15deg',
+        '15': '15deg',
+      },
     },
   },
   variants: {
