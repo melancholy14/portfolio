@@ -1,4 +1,4 @@
-import Container from './Container';
 import Title from './Title';
+import Modal from './Modal';
 
-export { Container, Title };
+export { Modal, Title };
