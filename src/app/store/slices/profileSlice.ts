@@ -12,7 +12,7 @@ export const profileSlice = createSlice({
   name: 'profile',
   initialState,
   reducers: {
-    loadRequest: state => {
+    loadRequest: (state) => {
       state.loading = true;
     },
     loadSuccess: (state, action: PayloadAction<GithubProfile>) => {

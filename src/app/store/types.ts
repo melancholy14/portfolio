@@ -3,10 +3,10 @@ export type GithubProfile = {
   name: string;
   blog: string;
   html_url: string;
-}
+};
 
 export type ProfileState = {
   loading?: boolean;
   data?: GithubProfile;
-  error?: string; 
-}
+  error?: string;
+};

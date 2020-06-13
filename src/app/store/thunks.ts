@@ -7,11 +7,12 @@ export const loadGithubProfile = () => (dispatch: AppDispatch) => {
   dispatch(loadRequest());
 
   axios('https://api.github.com/users/melancholy14')
-  .then(response => {
-    dispatch(loadSuccess(response.data));
-  }).catch(error => {
-    console.error(error);
+    .then((response) => {
+      dispatch(loadSuccess(response.data));
+    })
+    .catch((error) => {
+      console.error(error);
 
-    dispatch(loadFailure(error));
-  });
-}
+      dispatch(loadFailure(error));
+    });
+};

@@ -3,7 +3,7 @@ import React from 'react';
 type TitleProps = {
   className?: string;
   children: React.ReactNode;
-}
+};
 
 function Title({ className, children }: TitleProps) {
   return (

@@ -8,10 +8,11 @@ function App() {
 
   useEffect(() => {
     const scroll = function () {
-      const rate = Math.round(window.scrollY / window.innerHeight * 100 / 13) + 1;
+      const rate =
+        Math.round(((window.scrollY / window.innerHeight) * 100) / 13) + 1;
 
       setBgIndex((prev) => {
-        return (prev !== rate) ? rate : prev;
+        return prev !== rate ? rate : prev;
       });
     };
 
@@ -19,12 +20,16 @@ function App() {
 
     return () => {
       window.removeEventListener('scroll', scroll);
-    }
+    };
   }, []);
 
   return (
     <div className="overflow-auto">
-      <div className={`transition duration-75 bg-teal-${(10 - bgIndex) * 100} text-gray-${bgIndex * 100}`}>
+      <div
+        className={`transition duration-75 bg-teal-${
+          (10 - bgIndex) * 100
+        } text-gray-${bgIndex * 100}`}
+      >
         <Profile />
         <Projects />
       </div>

@@ -8,15 +8,10 @@ type ProjectProps = {
     url?: string;
     image?: string;
     descriptions: string[];
-  }
+  };
 };
 
-function Project({ data: {
-  title,
-  url,
-  image,
-  descriptions,
-} }: ProjectProps) {
+function Project({ data: { title, url, image, descriptions } }: ProjectProps) {
   const [shadow, setShadow] = useState(false);
 
   const showShadow = () => setShadow(true);
@@ -24,13 +19,34 @@ function Project({ data: {
   const hiddenShadow = () => setShadow(false);
 
   return (
-    <div className={`${shadow ? 'shadow-2xl' : ''} p-4 rounded-3xl`} onMouseOver={showShadow} onMouseLeave={hiddenShadow}>
+    <div
+      className={`${shadow ? 'shadow-2xl' : ''} p-4 rounded-3xl`}
+      onMouseOver={showShadow}
+      onMouseLeave={hiddenShadow}
+    >
       <Title className="uppercase">{title}</Title>
-      {url && (<a href={url} target="_blank" rel="noopener noreferrer" className="italic text-xl">{url}</a>)}
+      {url && (
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="italic text-xl"
+        >
+          {url}
+        </a>
+      )}
       <ul className="p-4 pr-0 list-disc">
-        {descriptions.map((desc) => <li key={desc}>{desc}</li>)}
+        {descriptions.map((desc) => (
+          <li key={desc}>{desc}</li>
+        ))}
       </ul>
-      {image && <img src={image} alt={title} className="w-4/5 m-auto rounded shadow-md" />}
+      {image && (
+        <img
+          src={image}
+          alt={title}
+          className="w-4/5 m-auto rounded shadow-md"
+        />
+      )}
     </div>
   );
 }
