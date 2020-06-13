@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Container, Title } from 'app/components';
 
-import Project from './Project';
-
 import { projects, experiences } from './constants';
+
+import Project from './Project';
 import Experience from './Experience';
 
 function Projects() {
@@ -14,8 +14,16 @@ function Projects() {
         <Title>::Experiences::</Title>
         <div className="relative">
           {experiences.map((ex, index) => {
-            const backgroundClass = `bg-red-${(experiences.length - index) * 100}`;
-            return (<Experience key={ex.company} data={ex} backgroundClass={backgroundClass} />);
+            const backgroundClass = `bg-red-${
+              (experiences.length - index) * 100
+            }`;
+            return (
+              <Experience
+                key={ex.company}
+                data={ex}
+                backgroundClass={backgroundClass}
+              />
+            );
           })}
         </div>
       </div>
