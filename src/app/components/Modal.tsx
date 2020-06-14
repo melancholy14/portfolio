@@ -12,7 +12,7 @@ function Modal({ show, onClose, children }: ModalProps) {
     <div
       className={`${
         show ? 'visible' : 'invisible'
-      } transition-visibility duration-75 fixed w-full h-full z-10 left-0 top-0 w-full bg-opacity-25 bg-black`}
+      } transition-visibility duration-75 fixed w-full h-full z-50 left-0 top-0 w-full bg-opacity-25 bg-black`}
     >
       <div
         className={`bg-white text-gray-800 ${
