@@ -1,29 +1,33 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+
 import Container from 'app/layouts/Container';
 
-type Position = {
-  x?: number | string;
-  y?: number | string;
-};
+import 'animate.css';
 
 function Main() {
-  const [position, setPosition] = useState<Position>({ x: '33%', y: '33%' });
+  const [animateClassName, setAnimateClassName] = useState<string>(
+    'animate__bounceInRight'
+  );
 
-  const onMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
-    const { screenX, screenY } = event;
+  useEffect(() => {
+    const timeoutFlip = setTimeout(() => {
+      setAnimateClassName('animate__flip');
+    }, 1250);
 
-    setPosition({
-      x: screenX,
-      y: screenY,
-    });
-  };
+    const timeoutWobble = setTimeout(() => {
+      setAnimateClassName('animate__wobble');
+    }, 2500);
 
-  console.log('position', position);
+    return () => {
+      clearTimeout(timeoutFlip);
+      clearTimeout(timeoutWobble);
+    };
+  }, []);
 
   return (
     <Container>
-      <div className="text-4xl" onMouseMove={onMouseMove}>
-        <div className="absolute" style={{ top: position.y, left: position.x }}>
+      <div className="relative text-4xl flex h-full pl-1/4">
+        <div className={`m-auto animate__animated ${animateClassName}`}>
           <span className="font-bold text-6xl">Misol Goh</span>
           <br />
           <span className="font-semibold text-5xl">
