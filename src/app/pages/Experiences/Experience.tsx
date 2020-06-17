@@ -1,7 +1,6 @@
 import React from 'react';
 
 type ExperienceProps = {
-  backgroundClass: string;
   data: {
     position: string;
     company: string;
@@ -17,13 +16,10 @@ type ExperienceProps = {
 };
 
 function Experience({
-  data: { position, company, summary, specs, className, project },
-  backgroundClass,
+  data: { position, company, summary, specs, className },
 }: ExperienceProps) {
   return (
-    <div
-      className={`${backgroundClass} rounded-full absolute text-11/12 ${className}`}
-    >
+    <div className={`rounded-full text-11/12 ${className}`}>
       <div className="text-xl">
         <span className="font-semibold">{position}</span>
         <span className="mx-2">|</span>

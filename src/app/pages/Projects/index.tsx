@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { Title } from 'app/components';
 import Container from 'app/layouts/Container';
 
 import { projects } from './constants';
@@ -9,8 +8,7 @@ import Project from './Project';
 
 function Projects() {
   return (
-    <Container>
-      <Title id="project">#Personal Project</Title>
+    <Container id="project" title="#Personal Project">
       <Project data={projects.crimeMap} />
     </Container>
   );

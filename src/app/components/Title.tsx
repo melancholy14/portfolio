@@ -1,13 +1,19 @@
 import React from 'react';
 
 type TitleProps = {
+  id?: string;
   className?: string;
   children: React.ReactNode;
 };
 
-function Title({ className, children }: TitleProps) {
+function Title({ className, children, ...props }: TitleProps) {
   return (
-    <h1 className={`text-3xl font-bold ${className || ''}`}>{children}</h1>
+    <h1
+      {...props}
+      className={`text-3xl font-bold uppercase ${className || ''}`}
+    >
+      {children}
+    </h1>
   );
 }
 

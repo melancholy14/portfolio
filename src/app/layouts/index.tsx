@@ -17,7 +17,7 @@ function Layouts({ className, children }: LayoutsProps) {
 
   return (
     <div className={`${className || ''}`}>
-      <div className="p-4 xl:mx-5/33">
+      <div className="xl:mx-5/33">
         <button
           type="button"
           className="fixed top-0 m-12 z-20"
