@@ -10,7 +10,7 @@ type ContainerProps = {
 
 function Container({ id, title, className, children }: ContainerProps) {
   return (
-    <div className={`h-screen flex flex-col ${className || ''}`}>
+    <div className={`w-4/5 m-auto flex flex-col ${className || ''}`}>
       {title && <Title id={id}>{title}</Title>}
       {children}
     </div>

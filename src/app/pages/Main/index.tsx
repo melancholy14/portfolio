@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import Container from 'app/layouts/Container';
+import { useScrollForBackground } from 'app/hooks/scroll';
 
 import 'animate.css';
 
@@ -8,6 +9,8 @@ function Main() {
   const [animateClassName, setAnimateClassName] = useState<string>(
     'animate__bounceInRight'
   );
+
+  const { divRef } = useScrollForBackground('bg-blue-900');
 
   useEffect(() => {
     const timeoutFlip = setTimeout(() => {
@@ -25,8 +28,8 @@ function Main() {
   }, []);
 
   return (
-    <Container>
-      <div className="relative text-4xl flex h-full pl-1/4">
+    <Container className="h-screen">
+      <div className="relative text-4xl flex h-full pl-1/4" ref={divRef}>
         <div className={`m-auto animate__animated ${animateClassName}`}>
           <span className="font-bold text-6xl">Misol Goh</span>
           <br />

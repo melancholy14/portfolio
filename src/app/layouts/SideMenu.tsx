@@ -16,6 +16,7 @@ function SideMenu({ show, onClose }: SideMenuProps) {
             key={text}
             href={`#${text}`}
             className="uppercase text-6xl m-8"
+            onClick={onClose}
           >{`#${text}`}</a>
         ))}
       </div>

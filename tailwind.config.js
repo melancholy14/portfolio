@@ -1,6 +1,9 @@
 /* eslint-disable no-undef */
 module.exports = {
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       borderRadius: {
         xl: '1rem',
@@ -28,6 +31,7 @@ module.exports = {
         17: '4.25rem',
         18: '4.5rem',
         19: '4.75rem',
+        '4/5-screen': '80vh',
       },
       transitionProperty: {
         visibility: 'visibility',

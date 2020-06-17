@@ -1,3 +1,7 @@
+export type AppState = {
+  bgClassName: string;
+};
+
 export type GithubProfile = {
   avatar_url: string;
   name: string;
