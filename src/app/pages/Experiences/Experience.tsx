@@ -1,5 +1,4 @@
 import React from 'react';
-import Project from './Project';
 
 type ExperienceProps = {
   backgroundClass: string;
@@ -40,7 +39,6 @@ function Experience({
           ))}
         </p>
       </div>
-      {project && <Project data={project} />}
     </div>
   );
 }

@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import Layouts from 'app/layouts';
 
 import Main from 'app/pages/Main';
 import Profile from 'app/pages/Profile';
 import Projects from 'app/pages/Projects';
+import Experiences from 'app/pages/Experiences';
 
 function App() {
   const [bgIndex, setBgIndex] = useState<number>(1);
@@ -32,6 +33,7 @@ function App() {
         className={`transition duration-75 bg-teal-900 text-gray-${bgIndex * 100}`}
       >
         <Main />
+        <Experiences />
         <Projects />
         <Profile />
       </Layouts>
