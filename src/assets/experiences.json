@@ -2,8 +2,8 @@
   {
     "position": "Web Developer",
     "company": "Innovattic",
-    "summary":
-      "Part of a tech team responsible for developing and building a front-end application.",
+    "summary": "Part of a tech team responsible for developing and building a front-end application.",
+    "achievement": "Led developing the admin panel of the micro learning system",
     "specs": ["React", "Typescript", "NodeJS"]
   },
   {
@@ -11,6 +11,7 @@
     "company": "Trenbe",
     "summary":
       "Led Front-end side of the system as a main front-end developer using React and Redux.",
+      "achievement": "By applied React, a more dynamic and flexible user interface was introduced to customers.",
     "specs": ["React", "Redux", "AWS"]
   },
   {
@@ -19,5 +20,12 @@
     "summary":
       "Developed web interfaces for a project related to changing the platform from desktop-based into web-based; an argumentation-based analytics system.",
     "specs": ["D3", "BackboneJS"]
+  },
+  {
+    "position": "Full-Stack Developer",
+    "company": "IMOXION Co., Ltd",
+    "summary": "Part of the technical team responsible for designing, building and maintaining an email system",
+    "achievement": "Applied CKEditor to the system resulting in improved performance on writing an email",
+    "specs": ["Java", "jQuery"]
   }
 ]

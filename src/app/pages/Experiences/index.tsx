@@ -5,20 +5,50 @@ import { useScrollForBackground } from 'app/hooks/scroll';
 
 import experiences from 'assets/experiences.json';
 
+import { ExperienceType } from './types';
 import Experience from './Experience';
 
-function Projects() {
+function Experiences() {
   const { divRef } = useScrollForBackground('bg-orange-800');
+
+  const experienceTables: ExperienceType[][] = [];
+
+  experiences.forEach((exp, index) => {
+    if (index % 3 === 0) {
+      experienceTables[0] = experienceTables[0]
+        ? [...experienceTables[0], exp]
+        : [exp];
+    } else if (index % 3 === 1) {
+      experienceTables[1] = experienceTables[1]
+        ? [...experienceTables[1], exp]
+        : [exp];
+    } else if (index % 3 === 2) {
+      experienceTables[2] = experienceTables[2]
+        ? [...experienceTables[2], exp]
+        : [exp];
+    }
+  });
+
+
+  console.log(experienceTables.length);
 
   return (
     <Container id="work" title="#Work" className="h-4/5-screen">
       <div className="relative flex" ref={divRef}>
-        {experiences.map((ex) => {
-          return <Experience key={ex.company} data={ex} />;
-        })}
+        {experienceTables.map((columns) => (
+          <div
+            key={columns[0].company}
+            className="flex flex-col"
+            style={{ width: `calc(100%/${experienceTables.length})` }}
+          >
+            {columns.map((exp) => (
+              <Experience key={exp.company} data={exp} />
+            ))}
+          </div>
+        ))}
       </div>
     </Container>
   );
 }
 
-export default Projects;
+export default Experiences;
