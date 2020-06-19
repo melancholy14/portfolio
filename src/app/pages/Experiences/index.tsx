@@ -3,7 +3,7 @@ import React from 'react';
 import Container from 'app/layouts/Container';
 import { useScrollForBackground } from 'app/hooks/scroll';
 
-import { experiences } from './constants';
+import experiences from 'assets/experiences.json';
 
 import Experience from './Experience';
 

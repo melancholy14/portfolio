@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 
 import { Title } from 'app/components';
 
+import { ProjectType } from './types';
+
 type ProjectProps = {
-  data: {
-    title: string;
-    url?: string;
-    image?: string;
-    descriptions: string[];
-  };
+  data: ProjectType;
 };
 
 function Project({ data: { title, url, image, descriptions } }: ProjectProps) {
@@ -51,4 +48,4 @@ function Project({ data: { title, url, image, descriptions } }: ProjectProps) {
   );
 }
 
-export default Project;
+export default memo(Project);

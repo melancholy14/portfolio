@@ -19,7 +19,7 @@ function Experience({
   data: { position, company, summary, specs, className },
 }: ExperienceProps) {
   return (
-    <div className={`rounded-full text-11/12 ${className}`}>
+    <div className={`text-11/12 ${className}`}>
       <div className="text-xl">
         <span className="font-semibold">{position}</span>
         <span className="mx-2">|</span>
