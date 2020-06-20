@@ -13,8 +13,10 @@ function Experience({
   return (
     <div
       className={`bg-white text-black m-4 p-4 rounded-3xl ${
-        isHover ? 'shadow-inner border-8' : 'shadow-2xl border-4'
-      } border-red-400`}
+        isHover
+          ? 'shadow-inner border-8 opacity-100'
+          : 'shadow-2xl border-4 opacity-75'
+      } border-orange-400`}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
@@ -23,12 +25,12 @@ function Experience({
         <span className="mx-2">|</span>
         <span className="italic">{company}</span>
       </div>
-      <hr className="border-red-500 my-3 mx-2" />
+      <hr className="border-orange-500 my-3 mx-2" />
       <div>
         <p>{summary}</p>
         <p className="italic">{achievement}</p>
       </div>
-      <hr className="border-red-500 my-3 mx-2" />
+      <hr className="border-orange-500 my-3 mx-2" />
       <div>
         <p className="flex flex-wrap">
           {specs.map((spec) => (

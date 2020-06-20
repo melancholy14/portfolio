@@ -18,7 +18,8 @@ function Introduction() {
           A well-organised and confident post-grad Software Engineer, looking to
           pursue a new career in software development.
         </p>
-        <p className="xl:text-3xl lg:text-2xl md:text-xl">
+        <hr className="border-red-300 m-6" />
+        <p className="xl:text-3xl lg:text-xl md:text-md">
           As a software engineer with{' '}
           <span className="font-semibold">React and Redux, Java and AWS</span>,
           I was in the technical team responsible for{' '}
@@ -27,7 +28,8 @@ function Introduction() {
           </span>{' '}
           for 2 years.
         </p>
-        <p className="xl:text-3xl lg:text-2xl md:text-xl">
+        <hr className="border-red-300 m-6" />
+        <p className="xl:text-3xl lg:text-xl md:text-md">
           Currently, I’m working as a web developer using{' '}
           <span className="font-semibold">React and Typescript</span> in order
           to build web applications to provide positive effect on society.

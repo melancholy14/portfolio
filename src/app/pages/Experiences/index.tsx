@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Container from 'app/layouts/Container';
 import { useScrollForBackground } from 'app/hooks/scroll';
@@ -9,28 +9,51 @@ import { ExperienceType } from './types';
 import Experience from './Experience';
 
 function Experiences() {
+  const [columnNum, setColumnNum] = useState<number>(2);
+  const [experienceTables, setExperienceTables] = useState<ExperienceType[][]>(
+    []
+  );
+
   const { divRef } = useScrollForBackground('bg-orange-800');
 
-  const experienceTables: ExperienceType[][] = [];
-
-  experiences.forEach((exp, index) => {
-    if (index % 3 === 0) {
-      experienceTables[0] = experienceTables[0]
-        ? [...experienceTables[0], exp]
-        : [exp];
-    } else if (index % 3 === 1) {
-      experienceTables[1] = experienceTables[1]
-        ? [...experienceTables[1], exp]
-        : [exp];
-    } else if (index % 3 === 2) {
-      experienceTables[2] = experienceTables[2]
-        ? [...experienceTables[2], exp]
-        : [exp];
+  useEffect(() => {
+    if (window.innerWidth <= 640) {
+      setColumnNum(1);
     }
-  });
+
+    const handleResize = () => {
+      let newColumnNum = columnNum;
+      if (window.innerWidth <= 640) {
+        newColumnNum = 1;
+      } else {
+        newColumnNum = 2;
+      }
+
+      setColumnNum(newColumnNum);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const newExperienceTables: ExperienceType[][] = [];
+    experiences.forEach((exp, index) => {
+      const rest = index % columnNum;
+
+      newExperienceTables[rest] = newExperienceTables[rest]
+        ? [...newExperienceTables[rest], exp]
+        : [exp];
+    });
+
+    setExperienceTables(newExperienceTables);
+  }, [columnNum]);
 
   return (
-    <Container id="work" title="#Work" className="h-screen-4/5">
+    <Container id="work" title="#Work" className="mx-auto my-24 xl:my-40">
       <div className="relative flex" ref={divRef}>
         {experienceTables.map((columns) => (
           <div

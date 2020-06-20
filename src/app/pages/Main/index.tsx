@@ -31,17 +31,20 @@ function Main() {
   }, []);
 
   return (
-    <Container className="h-screen">
-      <div className="relative text-4xl flex h-full pl-1/4" ref={divRef}>
+    <Container className="h-screen m-auto">
+      <div
+        className="relative lg:text-4xl  text-2xl flex h-full md:pl-1/4"
+        ref={divRef}
+      >
         <div className={`m-auto animate__animated ${animateClassName}`}>
-          <span className="font-bold text-6xl">Misol Goh</span>
+          <span className="font-bold lg:text-6xl text-5xl">Misol Goh</span>
           <br />
-          <span className="font-semibold text-5xl">
+          <span className="font-semibold lg:text-5xl text-4xl">
             Front-end Engineer/Developer
           </span>
           <br />
+          <span>loves</span>
           <div className="flex items-center">
-            {`loves  `}
             Travel <MdCardTravel />
             {` / `}
             Coffee <DiCoffeescript />

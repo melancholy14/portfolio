@@ -10,12 +10,16 @@ function Profile() {
   const { divRef } = useScrollForBackground('bg-red-800');
 
   return (
-    <Container id="about" title="#ABOUT" className="h-screen-4/5">
-      <div className="flex" ref={divRef}>
-        <div className="w-1/3 p-10 text-center">
+    <Container
+      id="about"
+      title="#ABOUT"
+      className="mx-auto mt-24 pb-12 xl:mt-40 xl:pb-20"
+    >
+      <div className="flex flex-col md:flex-row" ref={divRef}>
+        <div className="w-full md:w-1/2 lg:w-1/3 p-4 lg:p-10 text-center">
           <GithubProfile />
         </div>
-        <div className="w-2/3 p-10 xl:text-2xl lg:text-xl md:text-base">
+        <div className="w-full md:w-1/2 lg:w-2/3 p-4 lg:p-10 text-base xl:text-2xl lg:text-xl">
           <Introduction />
         </div>
       </div>

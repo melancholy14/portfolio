@@ -34,7 +34,7 @@ function GithubProfile() {
           className="rounded-full mb-12 shadow-xl"
           alt="avatar"
         />
-        <Title className="text-5xl">{name}</Title>
+        <Title className="xl:text-5xl">{name}</Title>
         <p className="flex items-center justify-center italic text-xl">
           <span className="w-6">
             <MdEmail />
