@@ -29,11 +29,8 @@ function Experiences() {
     }
   });
 
-
-  console.log(experienceTables.length);
-
   return (
-    <Container id="work" title="#Work" className="h-4/5-screen">
+    <Container id="work" title="#Work" className="h-screen-4/5">
       <div className="relative flex" ref={divRef}>
         {experienceTables.map((columns) => (
           <div

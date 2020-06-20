@@ -4,6 +4,9 @@ import Container from 'app/layouts/Container';
 import { useScrollForBackground } from 'app/hooks/scroll';
 
 import 'animate.css';
+import { MdCardTravel } from 'react-icons/md';
+import { DiCoffeescript } from 'react-icons/di';
+import { FaBeer } from 'react-icons/fa';
 
 function Main() {
   const [animateClassName, setAnimateClassName] = useState<string>(
@@ -37,7 +40,14 @@ function Main() {
             Front-end Engineer/Developer
           </span>
           <br />
-          Travel/Coffee lover
+          <div className="flex items-center">
+            {`loves  `}
+            Travel <MdCardTravel />
+            {` / `}
+            Coffee <DiCoffeescript />
+            {` / `}
+            Beer <FaBeer />
+          </div>
         </div>
       </div>
     </Container>

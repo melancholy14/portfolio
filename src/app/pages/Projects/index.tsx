@@ -18,7 +18,7 @@ function Projects() {
   const { divRef } = useScrollForBackground('bg-green-800');
 
   return (
-    <Container id="project" title="#Personal Project" className="h-4/5-screen">
+    <Container id="project" title="#Personal Project" className="h-screen-4/5">
       <div ref={divRef}>
         {projects.map((project) => (
           <Project key={project.id} data={project} />

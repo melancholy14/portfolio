@@ -31,7 +31,8 @@ module.exports = {
         17: '4.25rem',
         18: '4.5rem',
         19: '4.75rem',
-        '4/5-screen': '80vh',
+        'screen-1/2': '50vh',
+        'screen-4/5': '80vh',
       },
       transitionProperty: {
         visibility: 'visibility',
@@ -58,10 +59,6 @@ module.exports = {
       },
       fontSize: {
         '11/12': `${(11 / 12) * 100}%`,
-      },
-      rotate: {
-        '-15': '-15deg',
-        '15': '15deg',
       },
     },
   },
