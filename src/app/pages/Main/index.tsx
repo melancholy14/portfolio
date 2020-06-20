@@ -38,9 +38,11 @@ function Main() {
         ref={divRef}
       >
         <div className={`m-auto animate__animated ${animateClassName}`}>
-          <span className="font-bold lg:text-6xl text-5xl">Misol Goh</span>
+          <span className="font-sriracha font-bold lg:text-6xl text-5xl">
+            Misol Goh
+          </span>
           <br />
-          <span className="font-semibold lg:text-5xl text-4xl">
+          <span className="font-sriracha font-semibold lg:text-5xl text-4xl">
             Front-end Engineer/Developer
           </span>
           <br />

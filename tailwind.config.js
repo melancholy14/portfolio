@@ -5,6 +5,10 @@ module.exports = {
       center: true,
     },
     extend: {
+      fontFamily: {
+        pro: 'Source Sans Pro',
+        sriracha: 'Sriracha',
+      },
       borderRadius: {
         xl: '1rem',
         '2xl': '1.5rem',
@@ -49,14 +53,10 @@ module.exports = {
         '1/20': '5%',
         '1/14': '7%',
         '3/33': '9%',
-        '5/33': '15%',
         '1/4': '25%',
       },
-      margin: {
-        '5/33': '15%',
-      },
-      fontSize: {
-        '11/12': `${(11 / 12) * 100}%`,
+      opacity: {
+        95: 0.95,
       },
     },
   },
@@ -64,8 +64,8 @@ module.exports = {
     margin: ['responsive'],
   },
   plugins: [],
-  // purge: {
-  //   enabled: false,
-  //   content: ['./src/**/*.html', './src/**/*.tsx', './src/**/*.ts'],
-  // },
+  purge: {
+    enabled: true,
+    content: ['./src/**/*.html', './src/**/*.tsx', './src/**/*.ts'],
+  },
 };

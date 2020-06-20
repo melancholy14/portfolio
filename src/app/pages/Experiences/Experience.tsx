@@ -20,15 +20,20 @@ function Experience({
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <div className="text-xl">
-        <span className="font-semibold">{position}</span>
+      <div className="text-xl font-sans">
+        <span className="font-bold">{position}</span>
         <span className="mx-2">|</span>
         <span className="italic">{company}</span>
       </div>
-      <hr className="border-orange-500 my-3 mx-2" />
+      <hr className="border-2 border-orange-500 my-3 mx-2" />
       <div>
         <p>{summary}</p>
-        <p className="italic">{achievement}</p>
+        {achievement && (
+          <>
+            <hr className="border-orange-500 my-3 mx-3" />
+            <p className="italic">{achievement}</p>
+          </>
+        )}
       </div>
       <hr className="border-orange-500 my-3 mx-2" />
       <div>

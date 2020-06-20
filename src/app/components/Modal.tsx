@@ -15,8 +15,8 @@ function Modal({ show, onClose, children }: ModalProps) {
       } transition-visibility duration-75 fixed w-full h-full z-50 left-0 top-0 w-full bg-opacity-25 bg-black`}
     >
       <div
-        className={`bg-white text-gray-800 ${
-          show ? 'w-5/12' : 'w-0'
+        className={`bg-white text-gray-800 opacity-95 ${
+          show ? 'w-full md:w-7/12 lg:w-5/12' : 'w-0'
         } transition-width duration-75 p-12 h-full rounded-tr-3xl rounded-br-3xl`}
       >
         <div className="flex justify-end">
