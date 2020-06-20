@@ -9,11 +9,12 @@ export function useScrollForBackground(backgroundClass: string) {
 
   useEffect(() => {
     const scroll = function () {
+      const { scrollY } = window;
       const { offsetTop = 0, offsetHeight = 0 } = divRef.current || {};
 
       if (
-        window.scrollY >= offsetTop - offsetHeight &&
-        window.scrollY < offsetTop + offsetHeight / 2
+        scrollY >= offsetTop - offsetHeight / 2 &&
+        scrollY < offsetTop + offsetHeight / 2
       ) {
         dispatch(setBackgroundClass(backgroundClass));
       }

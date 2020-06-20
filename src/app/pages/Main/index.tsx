@@ -3,10 +3,11 @@ import React, { useEffect, useState } from 'react';
 import Container from 'app/layouts/Container';
 import { useScrollForBackground } from 'app/hooks/scroll';
 
-import 'animate.css';
 import { MdCardTravel } from 'react-icons/md';
 import { DiCoffeescript } from 'react-icons/di';
 import { FaBeer } from 'react-icons/fa';
+
+import 'animate.css';
 
 function Main() {
   const [animateClassName, setAnimateClassName] = useState<string>(

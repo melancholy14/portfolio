@@ -8,8 +8,10 @@ import experiences from 'assets/experiences.json';
 import { ExperienceType } from './types';
 import Experience from './Experience';
 
+const DEFAULT_COLUMN_NUM = 2;
+
 function Experiences() {
-  const [columnNum, setColumnNum] = useState<number>(2);
+  const [columnNum, setColumnNum] = useState<number>(DEFAULT_COLUMN_NUM);
   const [experienceTables, setExperienceTables] = useState<ExperienceType[][]>(
     []
   );
@@ -17,13 +19,15 @@ function Experiences() {
   const { divRef } = useScrollForBackground('bg-orange-800');
 
   useEffect(() => {
-    if (window.innerWidth <= 640) {
+    const smallDeviceWidth = 640;
+
+    if (window.innerWidth <= smallDeviceWidth) {
       setColumnNum(1);
     }
 
     const handleResize = () => {
-      let newColumnNum = columnNum;
-      if (window.innerWidth <= 640) {
+      let newColumnNum = DEFAULT_COLUMN_NUM;
+      if (window.innerWidth <= smallDeviceWidth) {
         newColumnNum = 1;
       } else {
         newColumnNum = 2;
