@@ -12,7 +12,7 @@ function SocialMedia() {
           Icon: MdEmail,
         },
         {
-          href: 'https://github.com/users/melancholy14',
+          href: 'https://www.github.com/melancholy14',
           Icon: FaGithub,
         },
         {
