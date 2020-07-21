@@ -12,10 +12,8 @@ function Experience({
 
   return (
     <div
-      className={`bg-white text-black m-4 p-4 rounded-3xl ${
-        isHover
-          ? 'shadow-inner border-8 opacity-100'
-          : 'shadow-2xl border-4 opacity-75'
+      className={`bg-white text-black m-4 p-4 rounded-3xl border-4 ${
+        isHover ? 'shadow-inner opacity-100' : 'shadow-2xl opacity-75'
       } border-orange-400`}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
