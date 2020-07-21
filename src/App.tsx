@@ -6,6 +6,8 @@ import Profile from 'app/pages/Profile';
 import Projects from 'app/pages/Projects';
 import Experiences from 'app/pages/Experiences';
 
+import 'pattern.css/dist/pattern.css';
+
 function App() {
   return (
     <div className="overflow-auto">

@@ -11,7 +11,7 @@ type ProjectProps = {
 function Project({ data: { title, url, image, descriptions } }: ProjectProps) {
   return (
     <div
-      className="shadow-xl p-4 rounded-3xl relative bg-contain bg-fixed"
+      className="shadow-xl p-4 rounded-3xl relative bg-cover"
       style={{ backgroundImage: `url(${image})` }}
     >
       <div className="bg-white text-black lg:w-1/3 md:w-1/2 p-4 rounded-2xl opacity-75">

@@ -31,7 +31,7 @@ const favourites = [
 ];
 
 function Main() {
-  const [flipIndex, setFlipIndex] = useState<number>(-2);
+  const [flipIndex, setFlipIndex] = useState<number>(-1);
 
   const { divRef } = useScrollForBackground('bg-blue-900');
 
@@ -45,7 +45,7 @@ function Main() {
 
         return prev + 1;
       });
-    }, 1500);
+    }, 1200);
 
     return () => {
       clearInterval(intervalFlip);
@@ -57,40 +57,44 @@ function Main() {
   return (
     <Container className="h-screen m-auto">
       <div
-        className="relative font-sriracha lg:text-4xl  text-2xl flex h-full md:pl-1/4"
+        className="relative font-sriracha lg:text-4xl text-2xl flex h-full"
         ref={divRef}
       >
-        <div className="m-auto">
-          <span className="font-bold lg:text-6xl text-5xl">Misol Goh</span>
-          <br />
-          <span className="text-yellow-500 font-semibold lg:text-5xl text-4xl">
-            Software Developer
-          </span>
-          <br />
-          <span>loves</span>
-          <div className="h-15">
-            {favourites.map(({ text, Icon }, index) => (
-              <div
-                key={text}
-                className={`flex items-center ${
-                  index === flipIndex
-                    ? 'block animate__animated animate__flipInX'
-                    : 'hidden'
-                } ${isLast(index) ? 'text-red-300' : ''}`}
-              >
-                <span className="mr-3">{text}</span>
-                <Icon />
+        <div className="w-full">
+          <div className="w-1/3 h-1/2 ml-1/4 mt-4/33 pattern-dots-xl text-orange-300 uppercase">
+            <div className="text-white ml-3/5 pt-1/3 w-33/20">
+              <span className="font-bold lg:text-6xl text-5xl">Misol Goh</span>
+              <br />
+              <span className="text-yellow-500 font-semibold lg:text-5xl text-4xl">
+                Software Developer
+              </span>
+              <br />
+              <span>loves</span>
+              <div className="h-15">
+                {favourites.map(({ text, Icon }, index) => (
+                  <div
+                    key={text}
+                    className={`flex items-center ${
+                      index === flipIndex
+                        ? 'block animate__animated animate__flipInX'
+                        : 'hidden'
+                    } ${isLast(index) ? 'text-red-300' : ''}`}
+                  >
+                    <span className="mr-3">{text}</span>
+                    <Icon />
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-          <div className="text-2xl py-4 h-17">
-            {isLast(flipIndex) && (
-              <div className="flex items-center animate__animated animate__zoomIn">
-                <span className="mr-3">Wanna know more?</span>
-                <span className="mr-3 font-extrabold">Scroll Down</span>
-                <FiArrowDown />
+              <div className="text-2xl py-4 h-17">
+                {isLast(flipIndex) && (
+                  <div className="flex items-center animate__animated animate__zoomIn">
+                    <span className="mr-3">Wanna know more?</span>
+                    <span className="mr-3 font-extrabold">Scroll Down</span>
+                    <FiArrowDown />
+                  </div>
+                )}
               </div>
-            )}
+            </div>
           </div>
         </div>
       </div>
