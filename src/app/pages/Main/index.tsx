@@ -61,16 +61,18 @@ function Main() {
         ref={divRef}
       >
         <div className="w-full">
-          <div className="w-1/3 h-1/2 ml-1/4 mt-4/33 pattern-dots-xl text-orange-300 uppercase">
-            <div className="text-white ml-3/5 pt-1/3 w-33/20">
-              <span className="font-bold lg:text-6xl text-5xl">Misol Goh</span>
+          <div className="w-1/2 lg:w-1/3 lg:h-1/2 lg:ml-1/4 mt-1/3 lg:mt-4/33 pattern-dots-lg text-orange-600 uppercase">
+            <div className="text-white ml-2/5 md:ml-3/5 pt-1/3 w-7/4 md:w-33/20">
+              <span className="font-bold text-4xl md:text-5xl lg:text-6xl">
+                Misol Goh
+              </span>
               <br />
-              <span className="text-yellow-500 font-semibold lg:text-5xl text-4xl">
+              <span className="text-yellow-500 font-semibold text-3xl md:text-4xl lg:text-5xl">
                 Software Developer
               </span>
               <br />
               <span>loves</span>
-              <div className="h-15">
+              <div className="h-15 text-2xl md:text-3xl lg:text-4xl">
                 {favourites.map(({ text, Icon }, index) => (
                   <div
                     key={text}
@@ -80,14 +82,14 @@ function Main() {
                         : 'hidden'
                     } ${isLast(index) ? 'text-red-300' : ''}`}
                   >
-                    <span className="mr-3">{text}</span>
+                    <span className="mr-1 lg:mr-3">{text}</span>
                     <Icon />
                   </div>
                 ))}
               </div>
               <div className="text-2xl py-4 h-17">
                 {isLast(flipIndex) && (
-                  <div className="flex items-center animate__animated animate__zoomIn">
+                  <div className="flex items-center flex-col md:flex-row animate__animated animate__zoomIn">
                     <span className="mr-3">Wanna know more?</span>
                     <span className="mr-3 font-extrabold">Scroll Down</span>
                     <FiArrowDown />
