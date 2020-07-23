@@ -19,6 +19,8 @@
     "company": "University of Southampton",
     "summary":
       "Developed web interfaces for a project related to changing the platform from desktop-based into web-based; an argumentation-based analytics system.",
+    "achievement":
+      "Led Client side of a web-based argumentation-based analytics system.",
     "specs": ["D3", "BackboneJS"]
   },
   {
@@ -26,6 +28,6 @@
     "company": "IMOXION Co., Ltd",
     "summary": "Part of the technical team responsible for designing, building and maintaining an email system",
     "achievement": "Applied CKEditor to the system resulting in improved performance on writing an email",
-    "specs": ["Java", "jQuery"]
+    "specs": ["Java", "Spring Boot", "jQuery"]
   }
 ]

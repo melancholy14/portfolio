@@ -11,7 +11,7 @@ function SideMenu({ show, onClose }: SideMenuProps) {
   return (
     <Modal show={show} onClose={onClose}>
       <div className="flex flex-col">
-        {['work', 'project', 'about'].map((text) => (
+        {['skills-experience', 'project', 'about'].map((text) => (
           <a
             key={text}
             href={`#${text}`}

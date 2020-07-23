@@ -1,47 +1,50 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+
+import { selectApp } from 'app/store/selectors';
+
 import { ExperienceType } from './types';
 
 type ExperienceProps = {
   data: ExperienceType;
 };
 
-function Experience({
-  data: { position, company, summary, achievement, specs },
-}: ExperienceProps) {
+function Experience({ data: { position, company, specs } }: ExperienceProps) {
   const [isHover, setHover] = useState<boolean>(false);
+
+  const { bgClassName } = useSelector(selectApp);
 
   return (
     <div
-      className={`bg-white text-black m-4 p-4 rounded-3xl border-4 ${
-        isHover ? 'shadow-inner opacity-100' : 'shadow-2xl opacity-75'
-      } border-orange-400`}
-      onMouseOver={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
+      className={`${
+        isHover ? 'pattern-diagonal-lines-sm' : ''
+      } my-4 md:mx-4 rounded-xl`}
     >
-      <div className="text-xl font-sans">
-        <span className="font-bold">{position}</span>
-        <span className="mx-2">|</span>
-        <span className="italic">{company}</span>
-      </div>
-      <hr className="border-2 border-orange-500 my-3 mx-2" />
-      <div>
-        <p>{summary}</p>
-        {achievement && (
-          <>
-            <hr className="border-orange-500 my-3 mx-3" />
-            <p className="italic">{achievement}</p>
-          </>
-        )}
-      </div>
-      <hr className="border-orange-500 my-3 mx-2" />
-      <div>
-        <p className="flex flex-wrap">
-          {specs.map((spec) => (
-            <span key={spec} className="mx-3 font-bold italic">
-              {spec}
-            </span>
-          ))}
+      <div
+        className={`p-4 rounded-xl ${
+          isHover
+            ? `shadow-inner transform translate-x-4 -translate-y-4 ${
+                bgClassName === 'bg-orange-800' ? 'bg-red-800' : 'bg-indigo-800'
+              }`
+            : 'shadow-2xl'
+        }`}
+        onMouseOver={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        <p className="text-xl md:text-2xl font-bold font-sriracha text-yellow-500">
+          {position}
         </p>
+        <p className="text-lg italic">{company}</p>
+        <hr className="border-2 border-orange-500 my-3 mx-2" />
+        <div>
+          <p className="flex flex-wrap font-sriracha text-gray-200 text-xl">
+            {specs.map((spec) => (
+              <span key={spec} className="mx-3 font-bold italic">
+                {spec}
+              </span>
+            ))}
+          </p>
+        </div>
       </div>
     </div>
   );

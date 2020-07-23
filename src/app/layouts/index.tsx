@@ -21,9 +21,9 @@ function Layouts({ className, children }: LayoutsProps) {
 
   return (
     <div
-      className={`transition duration-500 text-white ${bgClassName || ''} ${
-        className || ''
-      }`}
+      className={`transition duration-500 text-white font-mono
+      ${bgClassName || ''}
+      ${className || ''}`}
     >
       <div className="container">
         <button

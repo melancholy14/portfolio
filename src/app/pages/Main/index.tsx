@@ -32,6 +32,7 @@ const favourites = [
 
 function Main() {
   const [flipIndex, setFlipIndex] = useState<number>(-1);
+  const [patternClass, setPatternClass] = useState<string>('pattern-dots-lg');
 
   const { divRef } = useScrollForBackground('bg-blue-900');
 
@@ -52,6 +53,24 @@ function Main() {
     };
   }, []);
 
+  useEffect(() => {
+    const largeScreenWidth = 1440;
+
+    const handleResize = () => {
+      if (window.innerWidth >= largeScreenWidth) {
+        setPatternClass('pattern-dots-xl');
+      } else {
+        setPatternClass('pattern-dots-lg');
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const isLast = (index: number) => index === favourites.length - 1;
 
   return (
@@ -61,7 +80,9 @@ function Main() {
         ref={divRef}
       >
         <div className="w-full">
-          <div className="w-1/2 lg:w-1/3 lg:h-1/2 lg:ml-1/4 mt-1/3 lg:mt-4/33 pattern-dots-lg text-orange-600 uppercase">
+          <div
+            className={`w-1/2 lg:w-1/3 lg:h-1/2 lg:ml-1/4 mt-1/3 lg:mt-4/33 ${patternClass} text-orange-600 uppercase`}
+          >
             <div className="text-white ml-2/5 md:ml-3/5 pt-1/3 w-7/4 md:w-33/20">
               <span className="font-bold text-4xl md:text-5xl lg:text-6xl">
                 Misol Goh
