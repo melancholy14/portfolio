@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Modal } from 'app/components';
+import SocialMedia from 'app/pages/Profile/SocialMedia';
 
 type SideMenuProps = {
   show: boolean;
@@ -15,11 +16,15 @@ function SideMenu({ show, onClose }: SideMenuProps) {
           <a
             key={text}
             href={`#${text}`}
-            className="uppercase text-6xl m-8"
+            className="uppercase text-4xl md:text-5xl xl:text-6xl m-4 md:m-8"
             onClick={onClose}
-          >{`#${text}`}</a>
+          >{`#${text.replace('-', ' & ')}`}</a>
         ))}
       </div>
+      <SocialMedia
+        className="flex items-center justify-start m-4 ml-2 md:hidden"
+        iconClassName="mx-4"
+      />
     </Modal>
   );
 }

@@ -4,7 +4,8 @@ import { MdMenu } from 'react-icons/md';
 
 import { selectApp } from 'app/store/selectors';
 
-import SocialMedia from './SocialMedia';
+import SocialMedia from 'app/pages/Profile/SocialMedia';
+
 import SideMenu from './SideMenu';
 
 type LayoutsProps = {
@@ -28,13 +29,16 @@ function Layouts({ className, children }: LayoutsProps) {
       <div className="container">
         <button
           type="button"
-          className="fixed top-0 m-12 z-20"
+          className="fixed top-0 m-4 md:m-6 lg:m-12 z-20"
           onClick={handleShowMenu}
         >
           <MdMenu size="3rem" />
         </button>
         {children}
-        <SocialMedia />
+        <SocialMedia
+          className="fixed bottom-0 m-4 md:m-6 lg:m-12 hidden md:flex flex-col z-20"
+          iconClassName="my-4"
+        />
       </div>
       <SideMenu show={showMenu} onClose={handleShowMenu} />
     </div>

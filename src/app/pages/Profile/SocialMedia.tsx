@@ -6,13 +6,18 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 import { selectProfile } from 'app/store/selectors';
 
-function SocialMedia() {
+type SocialMediaProps = {
+  className: string;
+  iconClassName?: string;
+};
+
+function SocialMedia({ className, iconClassName }: SocialMediaProps) {
   const { loading, data } = useSelector(selectProfile);
 
   const { blog, html_url: url } = data || {};
 
   return (
-    <div className="fixed bottom-0 m-12 flex z-20">
+    <div className={className}>
       {loading && <div />}
       {!loading &&
         [
@@ -34,7 +39,7 @@ function SocialMedia() {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="mx-4"
+            className={iconClassName}
           >
             <Icon size="2rem" />
           </a>
