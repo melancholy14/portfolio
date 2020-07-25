@@ -61,7 +61,7 @@ function Experiences() {
   return (
     <Container
       id="skills-experience"
-      title="#Skill &amp; Experience"
+      title="#Skills &amp; Experience"
       className="mx-auto my-24 xl:my-40"
     >
       <div className="flex flex-col xl:flex-row" ref={divRef}>

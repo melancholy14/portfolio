@@ -54,7 +54,7 @@ function Main() {
   }, []);
 
   useEffect(() => {
-    const largeScreenWidth = 1440;
+    const largeScreenWidth = 1280;
 
     const handleResize = () => {
       if (window.innerWidth >= largeScreenWidth) {
@@ -63,6 +63,8 @@ function Main() {
         setPatternClass('pattern-dots-lg');
       }
     };
+
+    handleResize();
 
     window.addEventListener('resize', handleResize);
 
