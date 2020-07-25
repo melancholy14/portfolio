@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 import { selectApp } from 'app/store/selectors';
 
@@ -13,6 +14,8 @@ function Experience({ data: { position, company, specs } }: ExperienceProps) {
   const [isHover, setHover] = useState<boolean>(false);
 
   const { bgClassName } = useSelector(selectApp);
+
+  const { t } = useTranslation();
 
   return (
     <div
@@ -32,7 +35,7 @@ function Experience({ data: { position, company, specs } }: ExperienceProps) {
         onMouseLeave={() => setHover(false)}
       >
         <p className="text-xl md:text-2xl font-bold font-sriracha text-yellow-500">
-          {position}
+          {t(position)}
         </p>
         <p className="text-lg italic">{company}</p>
         <hr className="border-2 border-orange-500 my-3 mx-2" />
@@ -40,7 +43,7 @@ function Experience({ data: { position, company, specs } }: ExperienceProps) {
           <p className="flex flex-wrap font-sriracha text-gray-200 text-xl">
             {specs.map((spec) => (
               <span key={spec} className="mx-3 font-bold italic">
-                {spec}
+                {t(spec)}
               </span>
             ))}
           </p>

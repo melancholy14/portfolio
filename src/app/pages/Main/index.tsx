@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Container from 'app/layouts/Container';
 import { useScrollForBackground } from 'app/hooks/scroll';
@@ -35,6 +36,8 @@ function Main() {
   const [patternClass, setPatternClass] = useState<string>('pattern-dots-lg');
 
   const { divRef } = useScrollForBackground('bg-blue-900');
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     const intervalFlip = setInterval(() => {
@@ -87,11 +90,11 @@ function Main() {
           >
             <div className="text-white ml-2/5 md:ml-3/5 pt-1/3 w-7/4 md:w-33/20">
               <span className="font-bold text-4xl md:text-5xl lg:text-6xl">
-                Misol Goh
+                {t('Misol Goh')}
               </span>
               <br />
               <span className="text-yellow-500 font-semibold text-3xl md:text-4xl lg:text-5xl">
-                Software Developer
+                {t('Software Developer')}
               </span>
               <br />
               <span>loves</span>
@@ -105,7 +108,7 @@ function Main() {
                         : 'hidden'
                     } ${isLast(index) ? 'text-red-300' : ''}`}
                   >
-                    <span className="mr-1 lg:mr-3">{text}</span>
+                    <span className="mr-1 lg:mr-3">{t(text)}</span>
                     <Icon />
                   </div>
                 ))}
@@ -113,8 +116,10 @@ function Main() {
               <div className="text-2xl py-4 h-17">
                 {isLast(flipIndex) && (
                   <div className="flex items-center flex-col md:flex-row animate__animated animate__zoomIn">
-                    <span className="mr-3">Wanna know more?</span>
-                    <span className="mr-3 font-extrabold">Scroll Down</span>
+                    <span className="mr-3">{t('Wanna know more')}?</span>
+                    <span className="mr-3 font-extrabold">
+                      {t('Scroll down')}
+                    </span>
                     <FiArrowDown />
                   </div>
                 )}

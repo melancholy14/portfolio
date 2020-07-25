@@ -1,15 +1,19 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { ClockLoader } from 'react-spinners';
+import { useTranslation } from 'react-i18next';
 
 import { selectProfile } from 'app/store/selectors';
 import { loadGithubProfile } from 'app/store/thunks';
 import { Title } from 'app/components';
+
 import SocialMedia from './SocialMedia';
 
 function GithubProfile() {
   const { loading, data, error } = useSelector(selectProfile);
   const dispatch = useDispatch();
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     dispatch(loadGithubProfile());
@@ -33,7 +37,7 @@ function GithubProfile() {
           className="rounded-full mb-12 shadow-xl"
           alt="avatar"
         />
-        <Title className="xl:text-5xl">{name}</Title>
+        <Title className="xl:text-5xl">{name && t(name)}</Title>
         <p className="flex items-center justify-center italic text-xl md:hidden">
           <span className="ml-2">melancholy14@hotmail.com</span>
         </p>

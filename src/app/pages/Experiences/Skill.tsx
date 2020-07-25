@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import {
   DiJavascript,
@@ -12,27 +13,30 @@ import {
 import { FaAws } from 'react-icons/fa';
 
 function Skill() {
+  const { t } = useTranslation();
+
   const iconClassName = 'w-12 h-12';
 
   return (
     <div className="text-base md:text-lg lg:text-xl flex flex-col justify-center my-4 xl:w-1/3">
       <p className="mb-3">
-        My main area is{' '}
+        {t('My main area is')}{' '}
         <span className="text-orange-300 font-semibold">
-          the frontend development of the web
+          {t('the frontend development of the web')}
         </span>
         .
       </p>
       <p className="mb-3">
         <span className="font-sriracha font-bold">
-          React, Javascript, CSS Frameworks such as TailwindCSS, jQuery
+          {t('React')}, {t('Javascript')},{' '}
+          {t('CSS Frameworks such as TailwindCSS')}, {t('jQuery')}
         </span>{' '}
-        and so on.
+        {t('and so on')}.
       </p>
       <p className="mb-6">
-        In addition, I have many full-stack experiences with{' '}
+        {t('In addition, I have many full-stack experiences with')}{' '}
         <span className="font-sriracha font-bold">
-          NodeJS, Spring Boot and WordPress
+          {t('NodeJS')}, {t('Spring Boot')} {t('and')} {t('WordPress')}
         </span>
         .
       </p>

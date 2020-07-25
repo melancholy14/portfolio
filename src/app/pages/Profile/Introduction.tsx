@@ -1,12 +1,17 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 function Introduction() {
+  const { t } = useTranslation();
+
   return (
     <div>
       <div>
         <div>
-          A well-organised and confident post-grad Software Engineer would help
-          you to solve your problem in a nice way.
+          {t(
+            'A well-organised and confident post-grad Software Engineer would help you to solve your problem in a nice way'
+          )}
+          .
         </div>
         <hr className="border-red-300 m-6" />
         <div>
@@ -31,23 +36,23 @@ function Introduction() {
             ].map(({ point, love }) => (
               <li key={point}>
                 <span className="text-3xl font-sriracha text-orange-300">
-                  {point}
+                  {t(point)}
                 </span>
-                : {love}
+                : {t(love)}
               </li>
             ))}
           </ul>
         </div>
         <hr className="border-red-300 m-6" />
         <div className="text-xl">
-          Are you interested on me?
+          {t('Are you interested on me')}?
           <a
             href="mailto:melancholy14@hotmail.com"
             target="_blank"
             rel="noopener noreferrer"
             className="mx-2 underline"
           >
-            Send me an email
+            {t('Send me an email')}
           </a>
           :)
         </div>

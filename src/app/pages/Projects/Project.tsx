@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Title } from 'app/components';
 
@@ -9,13 +10,14 @@ type ProjectProps = {
 };
 
 function Project({ data: { title, url, image, descriptions } }: ProjectProps) {
+  const { t } = useTranslation();
   return (
     <div
       className="shadow-xl p-4 rounded-3xl relative bg-cover"
       style={{ backgroundImage: `url(${image})` }}
     >
       <div className="bg-white text-black lg:w-1/3 md:w-1/2 p-4 rounded-2xl opacity-75">
-        <Title>{title}</Title>
+        <Title>{t(title)}</Title>
         {url && (
           <a
             href={url}
@@ -28,7 +30,7 @@ function Project({ data: { title, url, image, descriptions } }: ProjectProps) {
         )}
         <ul className="p-4 pr-0 list-disc">
           {descriptions.map((desc) => (
-            <li key={desc}>{desc}</li>
+            <li key={desc}>{t(desc)}</li>
           ))}
         </ul>
       </div>
