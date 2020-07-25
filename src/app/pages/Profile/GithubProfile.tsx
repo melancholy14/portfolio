@@ -35,13 +35,13 @@ function GithubProfile() {
           alt="avatar"
         />
         <Title className="xl:text-5xl">{name}</Title>
-        <p className="flex items-center justify-center italic text-xl">
+        <p className="flex items-center justify-center italic text-xl md:hidden">
           <span className="w-6">
             <MdEmail />
           </span>
           <span className="ml-2">melancholy14@hotmail.com</span>
         </p>
-        <p className="flex items-center justify-center my-2">
+        <p className="flex items-center justify-center my-2 md:hidden">
           <a
             href={url}
             target="_blank"

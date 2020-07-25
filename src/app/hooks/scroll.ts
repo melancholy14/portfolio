@@ -13,8 +13,8 @@ export function useScrollForBackground(backgroundClass: string) {
       const { offsetTop = 0, offsetHeight = 0 } = divRef.current || {};
 
       if (
-        scrollY >= offsetTop - offsetHeight / 2 &&
-        scrollY < offsetTop + offsetHeight / 2
+        scrollY >= offsetTop - offsetHeight &&
+        scrollY < offsetTop + offsetHeight / 3
       ) {
         dispatch(setBackgroundClass(backgroundClass));
       }
