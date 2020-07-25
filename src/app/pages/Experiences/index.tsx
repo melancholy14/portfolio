@@ -8,6 +8,7 @@ import experiences from 'assets/experiences.json';
 import { ExperienceType } from './types';
 
 import Experience from './Experience';
+import Skill from './Skill';
 
 const DEFAULT_COLUMN_NUM = 2;
 
@@ -20,9 +21,9 @@ function Experiences() {
   const { divRef } = useScrollForBackground('bg-orange-800');
 
   useEffect(() => {
-    const smallDeviceWidth = 1024;
+    const smallDeviceWidth = 768;
 
-    if (window.innerWidth <= smallDeviceWidth) {
+    if (window.innerWidth < smallDeviceWidth) {
       setColumnNum(1);
     }
 
@@ -63,24 +64,8 @@ function Experiences() {
       title="#Skill &amp; Experience"
       className="mx-auto my-24 xl:my-40"
     >
-      <div className="flex flex-col md:flex-row" ref={divRef}>
-        <div className="text-base md:text-lg lg:text-xl flex flex-col justify-center my-4 md:w-1/2 xl:w-1/3">
-          <p className="mb-3">
-            My main area is{' '}
-            <span className="text-orange-300 font-semibold">
-              the frontend development of the web
-            </span>
-            .
-          </p>
-          <p className="mb-3">
-            React, Javascript / Typescript, CSS Frameworks like TailwindCSS,
-            NodeJS and so on.
-          </p>
-          <p>
-            In addition, I have many full-stack experiences with Spring Boot and
-            jQuery.
-          </p>
-        </div>
+      <div className="flex flex-col xl:flex-row" ref={divRef}>
+        <Skill />
         <div className="relative flex lg:w-2/3">
           {experienceTables.map((columns) => (
             <div
