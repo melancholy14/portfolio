@@ -10,7 +10,7 @@ function Title({ className, children, ...props }: TitleProps) {
   return (
     <h1
       {...props}
-      className={`text-3xl xl:text-4xl font-sriracha font-bold uppercase ${
+      className={`text-3xl xl:text-4xl font-jua font-bold uppercase ${
         className || ''
       }`}
     >

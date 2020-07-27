@@ -34,13 +34,13 @@ function Experience({ data: { position, company, specs } }: ExperienceProps) {
         onMouseOver={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >
-        <p className="text-xl md:text-2xl font-bold font-sriracha text-yellow-500">
+        <p className="text-xl md:text-2xl font-bold font-jua text-yellow-500">
           {t(position)}
         </p>
         <p className="text-lg italic">{company}</p>
         <hr className="border-2 border-orange-500 my-3 mx-2" />
         <div>
-          <p className="flex flex-wrap font-sriracha text-gray-200 text-xl">
+          <p className="flex flex-wrap font-jua text-gray-200 text-xl">
             {specs.map((spec) => (
               <span key={spec} className="mx-3 font-bold italic">
                 {t(spec)}

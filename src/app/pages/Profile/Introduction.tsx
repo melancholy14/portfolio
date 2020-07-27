@@ -35,7 +35,7 @@ function Introduction() {
               },
             ].map(({ point, love }) => (
               <li key={point}>
-                <span className="text-3xl font-sriracha text-orange-300">
+                <span className="text-3xl font-jua text-orange-300">
                   {t(point)}
                 </span>
                 : {t(love)}

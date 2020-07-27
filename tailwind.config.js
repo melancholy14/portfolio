@@ -6,8 +6,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        pro: 'Source Sans Pro',
-        sriracha: 'Sriracha',
+        jua: 'Jua',
       },
       borderRadius: {
         xl: '1rem',

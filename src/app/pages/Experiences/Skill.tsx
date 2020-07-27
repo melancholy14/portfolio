@@ -27,7 +27,7 @@ function Skill() {
         .
       </p>
       <p className="mb-3">
-        <span className="font-sriracha font-bold">
+        <span className="font-jua font-bold">
           {t('React')}, {t('Javascript')},{' '}
           {t('CSS Frameworks such as TailwindCSS')}, {t('jQuery')}
         </span>{' '}
@@ -35,7 +35,7 @@ function Skill() {
       </p>
       <p className="mb-6">
         {t('In addition, I have many full-stack experiences with')}{' '}
-        <span className="font-sriracha font-bold">
+        <span className="font-jua font-bold">
           {t('NodeJS')}, {t('Spring Boot')} {t('and')} {t('WordPress')}
         </span>
         .

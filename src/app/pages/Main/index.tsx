@@ -81,7 +81,7 @@ function Main() {
   return (
     <Container className="h-screen m-auto">
       <div
-        className="relative font-sriracha lg:text-4xl text-2xl flex h-full"
+        className="relative font-jua lg:text-4xl text-2xl flex h-full"
         ref={divRef}
       >
         <div className="w-full">
