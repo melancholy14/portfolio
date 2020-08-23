@@ -26,6 +26,9 @@
   "Web Developer": "Web Developer",
   "Software Development Engineer": "Software Development Engineer",
   "Full-Stack Developer": "Full-Stack Developer",
+  "Vue": "Vue",
+  "Django": "Django",
+  "Cypress": "Cypress",
   "uk crime map": "uk crime map",
   "The React-based crime searching system using a location, criminal types, and a date.": 
   "The React-based crime searching system using a location, criminal types, and a date.",
