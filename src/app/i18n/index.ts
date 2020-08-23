@@ -26,11 +26,10 @@ export const languages = [
 ];
 
 i18n
-  .use(initReactI18next)
   .use(LanguageDetector)
+  .use(initReactI18next)
   .init({
     resources,
-    lng: 'en',
     keySeparator: false,
     interpolation: {
       escapeValue: false,
