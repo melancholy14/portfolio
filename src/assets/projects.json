@@ -3,7 +3,7 @@
     "id": "crime-map",
     "title": "uk crime map",
     "url": "https://melancholy14.github.io/react-crime-map",
-    "image": "crime-map/main.png",
+    "image": "crime-map/main.webp",
     "descriptions": [
       "The React-based crime searching system using a location, criminal types, and a date.",
       "Communicated with UK police (data.police.uk) using RESTful API",

@@ -1,5 +1,12 @@
 [
   {
+    "position": "Full-Stack Developer",
+    "company": "Databank",
+    "summary": "Part of a tech team responsible for developing and building a web application.",
+    "achievement": "",
+    "specs": ["React", "Typescript", "Vue", "Django", "Cypress"]
+  },
+  {
     "position": "Web Developer",
     "company": "Innovattic",
     "summary": "Part of a tech team responsible for developing and building a front-end application.",
