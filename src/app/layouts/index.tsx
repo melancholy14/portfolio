@@ -37,7 +37,7 @@ function Layouts({ className, children }: LayoutsProps) {
           <MdMenu size="3rem" />
         </button>
         {children}
-        <div className="fixed top-0 right-0 m-4 lg:m-6 xl:m-12 z-20 hidden lg:block">
+        <div className="fixed top-0 right-0 m-4 lg:m-6 xl:m-12 z-20 hidden md:block">
           <Language />
         </div>
         <SocialMedia

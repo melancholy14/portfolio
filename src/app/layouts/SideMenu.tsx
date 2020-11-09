@@ -26,9 +26,9 @@ function SideMenu({ show, onClose }: SideMenuProps) {
         <div className="flex items-center justify-between md:justify-end">
           <SocialMedia
             className="flex items-center justify-start m-4 ml-2 md:hidden"
-            iconClassName="mx-4"
+            iconClassName="mx-2"
           />
-          <div className="block lg:hidden">
+          <div className="block md:hidden">
             <Language color="black" />
           </div>
         </div>
