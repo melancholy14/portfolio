@@ -66,7 +66,7 @@ function Experiences() {
     >
       <div className="flex flex-col xl:flex-row" ref={divRef}>
         <Skill />
-        <div className="relative flex lg:w-2/3">
+        <div className="relative flex xl:w-2/3">
           {experienceTables.map((columns) => (
             <div
               key={columns[0].company}

@@ -26,9 +26,8 @@
   "Web Developer": "웹 개발자",
   "Software Development Engineer": "소프트웨어 엔지니어",
   "Full-Stack Developer": "풀스택 개발자",
-  "Vue": "뷰",
   "Django": "장고",
-  "Cypress": "사이프러스",
+  "NextJS": "넥스트JS",
   "uk crime map": "uk 범죄 지도",
   "The React-based crime searching system using a location, criminal types, and a date.": 
   "주소, 범죄 종류, 날짜를 기준으로 검색할 수 있는, 리액트 기반의 번죄 검색 시스템",

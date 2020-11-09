@@ -4,7 +4,7 @@
     "company": "Databank",
     "summary": "Part of a tech team responsible for developing and building a web application.",
     "achievement": "",
-    "specs": ["React", "Typescript", "Vue", "Django", "Cypress"]
+    "specs": ["React", "Typescript", "NextJS", "Django"]
   },
   {
     "position": "Web Developer",
