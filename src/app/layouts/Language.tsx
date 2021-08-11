@@ -26,7 +26,7 @@ function Language({ color = 'white' }: LanguageProps) {
           } ${
             index === languages.length - 1 ? 'rounded-tr-xl rounded-br-xl' : ''
           } ${
-            code === i18n.language
+            i18n.language?.indexOf(code) >= 0
               ? color === 'white'
                 ? 'bg-white text-gray-700'
                 : 'bg-gray-700 text-white'
