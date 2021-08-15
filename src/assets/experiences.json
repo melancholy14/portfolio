@@ -1,10 +1,10 @@
 [
   {
-    "position": "Full-Stack Developer",
+    "position": "Lead Frontend Engineer",
     "company": "Databank",
     "summary": "Part of a tech team responsible for developing and building a web application.",
     "achievement": "",
-    "specs": ["React", "Typescript", "NextJS", "Django"]
+    "specs": ["React", "Typescript", "NextJS"]
   },
   {
     "position": "Web Developer",

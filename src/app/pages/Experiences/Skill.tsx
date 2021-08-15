@@ -4,13 +4,11 @@ import { useTranslation } from 'react-i18next';
 import {
   DiJavascript,
   DiCss3,
-  DiJira,
   DiLess,
   DiReact,
   DiWordpress,
   DiNodejs,
 } from 'react-icons/di';
-import { FaAws } from 'react-icons/fa';
 
 function Skill() {
   const { t } = useTranslation();
@@ -47,8 +45,6 @@ function Skill() {
         <DiCss3 className={iconClassName} />
         <DiLess className={iconClassName} />
         <DiWordpress className={iconClassName} />
-        <DiJira className={iconClassName} />
-        <FaAws className={iconClassName} />
       </div>
     </div>
   );
