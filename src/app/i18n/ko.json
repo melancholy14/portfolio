@@ -30,7 +30,7 @@
   "NextJS": "넥스트JS",
   "uk crime map": "uk 범죄 지도",
   "The React-based crime searching system using a location, criminal types, and a date.": 
-  "주소, 범죄 종류, 날짜를 기준으로 검색할 수 있는, 리액트 기반의 번죄 검색 시스템",
+  "주소, 범죄 종류, 날짜를 기준으로 검색할 수 있는, 리액트 기반의 범죄 검색 시스템",
   "Communicated with UK police (data.police.uk) using RESTful API": 
   "UK 경찰이 제공하는 데이터 (data.police.uk)를 RESTful API로 통신",
   "Applied LeafletJS for showing the result of search a user tried through a map": 
