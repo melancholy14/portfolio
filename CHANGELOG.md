@@ -9,3 +9,7 @@
 
 ### v1.5.1
 1. Fix typo & minor UI issues
+
+##v2.0
+1. Update the versions of packages
+2. Update the tailwindcss configuration

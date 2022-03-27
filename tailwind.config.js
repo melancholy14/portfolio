@@ -1,5 +1,5 @@
-/* eslint-disable no-undef */
 module.exports = {
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     container: {
       center: true,
@@ -75,8 +75,4 @@ module.exports = {
     margin: ['responsive'],
   },
   plugins: [],
-  // purge: {
-  //   enabled: true,
-  //   content: ['./src/**/*.html', './src/**/*.tsx', './src/**/*.ts'],
-  // },
 };
