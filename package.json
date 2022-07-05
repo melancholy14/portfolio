@@ -32,7 +32,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "tailwind:css": "tailwind build src/tailwind.css -c tailwind.config.js -o src/index.css",
+    "tailwind:css": "tailwind build -i ./src/tailwind.css -c tailwind.config.js -o ./src/index.css",
     "lint": "eslint './src/**/*.{ts, tsx}'"
   },
   "eslintConfig": {
