@@ -1,5 +1,12 @@
 [
   {
+    "position": "Service Dev. Lead",
+    "company": "HyperCloud",
+    "summary": "Led a tech team responsible for developing and building mobile & web applications containing XR contents",
+    "achievement": "",
+    "specs": ["React", "Typescript", "NestJS", "AWS"]
+  },
+  {
     "position": "Lead Frontend Engineer",
     "company": "Databank",
     "summary": "Part of a tech team responsible for developing and building a web application.",
