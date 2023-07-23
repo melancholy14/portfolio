@@ -3,7 +3,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { AppState } from 'app/store/types';
 
 const initialState: AppState = {
-  bgClassName: 'bg-teal-900',
+  bgClassName: 'bg-teal-600',
 };
 
 export const appSlice = createSlice({

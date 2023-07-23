@@ -35,7 +35,7 @@ function Main() {
   const [flipIndex, setFlipIndex] = useState<number>(-1);
   const [patternClass, setPatternClass] = useState<string>('pattern-dots-lg');
 
-  const { divRef } = useScrollForBackground('bg-blue-900');
+  const { divRef } = useScrollForBackground('bg-blue-600');
 
   const { t } = useTranslation();
 

@@ -18,7 +18,7 @@ function Experiences() {
     []
   );
 
-  const { divRef } = useScrollForBackground('bg-orange-800');
+  const { divRef } = useScrollForBackground('bg-orange-600');
 
   useEffect(() => {
     const smallDeviceWidth = 768;

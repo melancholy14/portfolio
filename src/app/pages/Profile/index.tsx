@@ -7,7 +7,7 @@ import GithubProfile from './GithubProfile';
 import Introduction from './Introduction';
 
 function Profile() {
-  const { divRef } = useScrollForBackground('bg-red-800');
+  const { divRef } = useScrollForBackground('bg-red-600');
 
   return (
     <Container

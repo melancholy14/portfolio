@@ -15,7 +15,7 @@ const projects: ProjectType[] = projectData.map(({ image, ...rest }) => ({
 }));
 
 function Projects() {
-  const { divRef } = useScrollForBackground('bg-green-800');
+  const { divRef } = useScrollForBackground('bg-green-600');
 
   return (
     <Container
