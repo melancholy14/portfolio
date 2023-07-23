@@ -1,5 +1,12 @@
 [
   {
+    "position": "Senior Frontend Engineer",
+    "company": "Kurly",
+    "summary": "Led one of parts in a team responsible for developing a frontend side of website called MarketKurly",
+    "achievement": "",
+    "specs": ["React", "Typescript", "NextJS"]
+  },
+  {
     "position": "Service Dev. Lead",
     "company": "HyperCloud",
     "summary": "Led a tech team responsible for developing and building mobile & web applications containing XR contents",

@@ -27,7 +27,7 @@ function Experience({ data: { position, company, specs } }: ExperienceProps) {
         className={`p-4 rounded-xl ${
           isHover
             ? `shadow-inner transform translate-x-4 -translate-y-4 ${
-                bgClassName === 'bg-orange-800' ? 'bg-red-800' : 'bg-indigo-800'
+                bgClassName === 'bg-orange-600' ? 'bg-red-600' : 'bg-indigo-600'
               }`
             : 'shadow-2xl'
         }`}
