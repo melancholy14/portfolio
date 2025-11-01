@@ -1,9 +1,9 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 
 import { MdEmail } from 'react-icons/md';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
+import { useAppSelector } from 'app/store';
 import { selectProfile } from 'app/store/selectors';
 
 type SocialMediaProps = {
@@ -12,7 +12,7 @@ type SocialMediaProps = {
 };
 
 function SocialMedia({ className, iconClassName }: SocialMediaProps) {
-  const { loading, data } = useSelector(selectProfile);
+  const { loading, data } = useAppSelector(selectProfile);
 
   const { blog, html_url: url } = data || {};
 

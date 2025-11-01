@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
+import { useAppSelector } from 'app/store';
 import { selectApp } from 'app/store/selectors';
 
 import { ExperienceType } from './types';
@@ -13,7 +13,7 @@ type ExperienceProps = {
 function Experience({ data: { position, company, specs } }: ExperienceProps) {
   const [isHover, setHover] = useState<boolean>(false);
 
-  const { bgClassName } = useSelector(selectApp);
+  const { bgClassName } = useAppSelector(selectApp);
 
   const { t } = useTranslation();
 

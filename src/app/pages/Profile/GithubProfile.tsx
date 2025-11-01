@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import { ClockLoader } from 'react-spinners';
 import { useTranslation } from 'react-i18next';
 
+import { useAppDispatch, useAppSelector } from 'app/store';
 import { selectProfile } from 'app/store/selectors';
 import { loadGithubProfile } from 'app/store/thunks';
 import { Title } from 'app/components';
@@ -10,8 +10,8 @@ import { Title } from 'app/components';
 import SocialMedia from './SocialMedia';
 
 function GithubProfile() {
-  const { loading, data, error } = useSelector(selectProfile);
-  const dispatch = useDispatch();
+  const { loading, data, error } = useAppSelector(selectProfile);
+  const dispatch = useAppDispatch();
 
   const { t } = useTranslation();
 
