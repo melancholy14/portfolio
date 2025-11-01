@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
 
 import { MdMenu } from 'react-icons/md';
 
+import { useAppSelector } from 'app/store';
 import { selectApp } from 'app/store/selectors';
 
 import SocialMedia from 'app/pages/Profile/SocialMedia';
@@ -18,7 +18,7 @@ type LayoutsProps = {
 function Layouts({ className, children }: LayoutsProps) {
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
-  const { bgClassName } = useSelector(selectApp);
+  const { bgClassName } = useAppSelector(selectApp);
 
   const handleShowMenu = () => setShowMenu(!showMenu);
 

@@ -1,11 +1,12 @@
 import { useEffect, useRef } from 'react';
-import { useDispatch } from 'react-redux';
+
+import { useAppDispatch } from 'app/store';
 import { setBackgroundClass } from 'app/store/slices/appSlice';
 
 export function useScrollForBackground(backgroundClass: string) {
   const divRef = useRef<HTMLDivElement>(null);
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     const scroll = function () {
