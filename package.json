@@ -46,6 +46,12 @@
     ]
   },
   "homepage": "https://melanchoy14.github.io/portfolio",
+  "eslintConfig": {
+    "rules": {
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off"
+    }
+  },
   "devDependencies": {
     "@types/webpack-env": "^1.15.2",
     "@typescript-eslint/eslint-plugin": "^5.62.0",

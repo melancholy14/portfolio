@@ -6,7 +6,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        jua: 'Jua',
+        dohyeon: 'Do Hyeon',
       },
       borderRadius: {
         xl: '1rem',
