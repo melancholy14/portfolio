@@ -1,12 +1,11 @@
 import { useEffect, useRef } from 'react';
 
-import { useAppDispatch } from 'app/store';
-import { setBackgroundClass } from 'app/store/slices/appSlice';
+import { useAppStore } from 'app/store';
 
 export function useScrollForBackground(backgroundClass: string) {
   const divRef = useRef<HTMLDivElement>(null);
 
-  const dispatch = useAppDispatch();
+  const setBackgroundClass = useAppStore((state) => state.setBackgroundClass);
 
   useEffect(() => {
     const scroll = function () {
@@ -17,7 +16,7 @@ export function useScrollForBackground(backgroundClass: string) {
         scrollY >= offsetTop - offsetHeight &&
         scrollY < offsetTop + offsetHeight / 3
       ) {
-        dispatch(setBackgroundClass(backgroundClass));
+        setBackgroundClass(backgroundClass);
       }
     };
 
@@ -26,7 +25,7 @@ export function useScrollForBackground(backgroundClass: string) {
     return () => {
       window.removeEventListener('scroll', scroll);
     };
-  }, [dispatch, backgroundClass]);
+  }, [setBackgroundClass, backgroundClass]);
 
   return { divRef };
 }
