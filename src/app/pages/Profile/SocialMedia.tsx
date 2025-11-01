@@ -3,8 +3,7 @@ import React from 'react';
 import { MdEmail } from 'react-icons/md';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-import { useAppSelector } from 'app/store';
-import { selectProfile } from 'app/store/selectors';
+import { useProfileStore } from 'app/store';
 
 type SocialMediaProps = {
   className: string;
@@ -12,7 +11,8 @@ type SocialMediaProps = {
 };
 
 function SocialMedia({ className, iconClassName }: SocialMediaProps) {
-  const { loading, data } = useAppSelector(selectProfile);
+  const loading = useProfileStore((state) => state.loading);
+  const data = useProfileStore((state) => state.data);
 
   const { blog, html_url: url } = data || {};
 

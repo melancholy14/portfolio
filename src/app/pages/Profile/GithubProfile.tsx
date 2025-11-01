@@ -2,22 +2,22 @@ import React, { useEffect } from 'react';
 import { ClockLoader } from 'react-spinners';
 import { useTranslation } from 'react-i18next';
 
-import { useAppDispatch, useAppSelector } from 'app/store';
-import { selectProfile } from 'app/store/selectors';
-import { loadGithubProfile } from 'app/store/thunks';
+import { useProfileStore } from 'app/store';
 import { Title } from 'app/components';
 
 import SocialMedia from './SocialMedia';
 
 function GithubProfile() {
-  const { loading, data, error } = useAppSelector(selectProfile);
-  const dispatch = useAppDispatch();
+  const loading = useProfileStore((state) => state.loading);
+  const data = useProfileStore((state) => state.data);
+  const error = useProfileStore((state) => state.error);
+  const loadGithubProfile = useProfileStore((state) => state.loadGithubProfile);
 
   const { t } = useTranslation();
 
   useEffect(() => {
-    dispatch(loadGithubProfile());
-  }, [dispatch]);
+    loadGithubProfile();
+  }, []);
 
   if (error) {
     return <div>Something went wrong!</div>;

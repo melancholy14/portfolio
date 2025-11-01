@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { useAppSelector } from 'app/store';
-import { selectApp } from 'app/store/selectors';
+import { useAppStore } from 'app/store';
 
 import { ExperienceType } from './types';
 
@@ -13,7 +12,7 @@ type ExperienceProps = {
 function Experience({ data: { position, company, specs } }: ExperienceProps) {
   const [isHover, setHover] = useState<boolean>(false);
 
-  const { bgClassName } = useAppSelector(selectApp);
+  const bgClassName = useAppStore((state) => state.bgClassName);
 
   const { t } = useTranslation();
 
@@ -34,13 +33,13 @@ function Experience({ data: { position, company, specs } }: ExperienceProps) {
         onMouseOver={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >
-        <p className="text-xl md:text-2xl font-bold font-jua text-yellow-500">
+        <p className="text-xl md:text-2xl font-bold font-dohyeon text-yellow-500">
           {t(position)}
         </p>
         <p className="text-lg italic">{company}</p>
         <hr className="border-2 border-orange-500 my-3 mx-2" />
         <div>
-          <p className="flex flex-wrap font-jua text-gray-200 text-xl">
+          <p className="flex flex-wrap font-dohyeon text-gray-200 text-xl">
             {specs.map((spec) => (
               <span key={spec} className="mx-3 font-bold italic">
                 {t(spec)}

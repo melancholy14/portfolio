@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 
 import { MdMenu } from 'react-icons/md';
 
-import { useAppSelector } from 'app/store';
-import { selectApp } from 'app/store/selectors';
+import { useAppStore } from 'app/store';
 
 import SocialMedia from 'app/pages/Profile/SocialMedia';
 
@@ -18,7 +17,7 @@ type LayoutsProps = {
 function Layouts({ className, children }: LayoutsProps) {
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
-  const { bgClassName } = useAppSelector(selectApp);
+  const bgClassName = useAppStore((state) => state.bgClassName);
 
   const handleShowMenu = () => setShowMenu(!showMenu);
 
